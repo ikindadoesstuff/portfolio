@@ -1,0 +1,28 @@
+#navbarButton {
+    height: calc(var(--navbarHeight) - 12px);
+    alignment-baseline: top;
+    background-color: white;
+    border: var(--outline-black) solid 1px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    /*text-bo: both;*/
+    text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    &.selected {
+        background-color: var(--primary-rose-500);
+    }
+
+    &:hover {
+
+    }
+}

@@ -1,21 +1,23 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 // Import Pages
-import Landing from './Landing.tsx'
+import Landing from "./pages/Landing.tsx";
 
 // Import Stylesheet
-import './global.css'
+import "./global.css";
 
-createRoot(document.getElementById('root')!).render(
-	<StrictMode>
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Landing/>}>
+// Import Components
+import { Navbar } from "./components/navbar/Navbar.tsx";
 
-				</Route>
-			</Routes>
-		</BrowserRouter>
-	</StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+        <BrowserRouter>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Landing />}></Route>
+            </Routes>
+        </BrowserRouter>
+    </StrictMode>,
+);
