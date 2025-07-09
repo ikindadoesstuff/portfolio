@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route path="/" element={<Landing />}></Route>
+                <Route path="/developer" element={<Landing />}></Route>
             </Routes>
         </BrowserRouter>
     </StrictMode>,

@@ -10,20 +10,16 @@ export function NavbarButton({
     target: string;
     iconName: any;
 }) {
-    console.log(location.href + "\n" + target);
-
-    let isCurrentPage = false;
-    if (location.href === target) {
-        isCurrentPage = true;
-    }
+    const isCurrentPage = location.pathname.startsWith(target);
+    console.log(isCurrentPage);
 
     return (
         <>
-            <a id="navbarButton" href={target}>
-                <DynamicIcon
-                    className={"icon " + (isCurrentPage ? "selected" : "")}
-                    name={iconName}
-                />
+            <a
+                className={"navbarButton" + (isCurrentPage ? " selected" : "")}
+                href={target}
+            >
+                <DynamicIcon className={"icon"} name={iconName} />
                 {text}
             </a>
         </>

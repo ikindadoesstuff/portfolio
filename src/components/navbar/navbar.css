@@ -4,8 +4,10 @@
     top: var(--navbarTop);
     height: var(--navbarHeight);
     width: fit-content;
-    background: var(--secondary-light-100);
+    max-width: 80vw;
+    background: var(--light-100);
     border-radius: 30px;
+    box-shadow: 0 0 1px var(--shadow-color), 0 4px 4px var(--shadow-color);
     position: fixed;
 
     /*Flexbox*/

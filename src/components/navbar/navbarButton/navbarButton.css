@@ -1,11 +1,11 @@
-#navbarButton {
+.navbarButton {
     height: calc(var(--navbarHeight) - 12px);
     alignment-baseline: top;
     background-color: white;
     border: var(--outline-black) solid 1px;
     border-radius: 999px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 550;
 
     /* Flexbox */
     display: flex;
@@ -18,11 +18,21 @@
     padding: 0 15px;
     box-sizing: border-box;
 
+    transition: 0.2s;
+
     &.selected {
-        background-color: var(--primary-rose-500);
+        background-color: var(--secondary-color-500);
+        color: var(--light-100);
+        border: var(--outline-selected) solid 1px;
+        box-shadow: -4px 2px 0 var(--shadow-color);
     }
 
     &:hover {
-
+        transform: translateY(-2px);
+        transition: 0.2s;
+        background-color: var(--hover-bg);
+        &.selected{
+            background-color: var(--selected-hover-bg);
+        }
     }
 }
