@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Raleway Variable';
+    src: url('/public/fonts/Raleway-VF.woff2') format('woff2-variations');
+    font-weight: 200 900;
+}
+
+@font-face {
+    font-family: 'Apfel Grotezk';
+    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apfel Grotezk';
+    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Mittel.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apfel Grotezk';
+    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Fett.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apfel Grotezk';
+    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Satt.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

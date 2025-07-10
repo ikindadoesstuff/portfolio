@@ -34,18 +34,19 @@ function Landing() {
                         ease: "circOut",
                     }}
                 >
-                    <img
-                        id="hero"
-                        className="center-absolute--horizontal center-absolute--vertical"
-                        src={"/hero.svg"}
-                        alt="hero"
-                    />
-                    <div>
-                        <h2>
+                    <section id="landing" className="page-section-flex">
+                        <img
+                            id="hero"
+                            style={{}}
+                            // className="center-absolute--horizontal center-absolute--vertical"
+                            src={"/hero-cropped.svg"}
+                            alt="hero"
+                        />
+                        <h2 id="text-1" style={{}}>
                             I'm a Student and Full-Stack Software Engineer,
                             based in the United States
                         </h2>
-                    </div>
+                    </section>
                 </motion.div>
             </main>
         </>

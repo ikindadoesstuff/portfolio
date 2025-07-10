@@ -1,10 +1,6 @@
 /*@import url('src/reset.css');*/
 
-@font-face {
-    font-family: 'Raleway Variable';
-    src: url('/public/fonts/Raleway-VF.woff2') format('woff2-variations');
-    font-weight: 200 900;
-}
+@import url('public/fonts/fonts.css');
 
 /* {
     outline: 1px solid #f800ff;
@@ -48,6 +44,7 @@ body {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
     color: white;
+    font-family: "Apfel Grotezk", sans-serif;
 }
 
 p {
@@ -59,7 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 #root {
