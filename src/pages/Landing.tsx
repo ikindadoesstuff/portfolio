@@ -41,7 +41,7 @@ function Landing() {
                     ease: "circOut",
                 }}
             >
-                <section id="landing" ref={landingSectionRef} className="page-section-flex">
+                <section id="landing" ref={landingSectionRef} className="page-section page-section--flex">
                     <img id="hero" src={"/hero-cropped.svg"} alt="hero" />
                     <h2 className="center-text">
                         I'm a <b>Student</b> and{" "}
@@ -57,7 +57,7 @@ function Landing() {
                         onClick={() => scrollToSection(aboutSectionRef)}
                     />
                 </section>
-                <section ref={aboutSectionRef} className="page-section-flex"></section>
+                <section ref={aboutSectionRef} className="page-section page-section--flex"></section>
             </motion.div>
         </main>
     );
