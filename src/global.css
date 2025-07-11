@@ -87,6 +87,21 @@ a:has([class]) {
     /*font: inherit;*/
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--hover-bg) rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--primary-color-500);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color-500) ;
+    border-radius: 6px;
+    border: 3px solid var(--primary-color-500);
+}
+
 .center-absolute--horizontal {
     margin-left: auto;
     margin-right: auto;
