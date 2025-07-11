@@ -1,5 +1,5 @@
 import "./Landing.css";
-import hero from "../../public/hero.svg";
+import { type RefObject, useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "../components/button/Button.tsx";
 
@@ -9,6 +9,13 @@ function Landing() {
     //     type: "tween",
     //     ease: "circOut",
     // };
+    let landingSectionRef = useRef(null);
+    let aboutSectionRef = useRef(null);
+    // let landingSectionRef = useRef(0);
+
+    const scrollToSection = (ref: RefObject<any>) => {
+        ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    };
 
     return (
         <main className="page-container">
@@ -34,7 +41,7 @@ function Landing() {
                     ease: "circOut",
                 }}
             >
-                <section id="landing" className="page-section-flex">
+                <section id="landing" ref={landingSectionRef} className="page-section-flex">
                     <img id="hero" src={"/hero-cropped.svg"} alt="hero" />
                     <h2 className="center-text">
                         I'm a <b>Student</b> and{" "}
@@ -43,8 +50,14 @@ function Landing() {
                         </b>
                         , based in the United States.
                     </h2>
-                    <Button text="About Me" iconName="arrow-down"></Button>
+                    <Button
+                        buttonType={"button--important"}
+                        text="About Me"
+                        iconName="arrow-down"
+                        onClick={() => scrollToSection(aboutSectionRef)}
+                    />
                 </section>
+                <section ref={aboutSectionRef} className="page-section-flex"></section>
             </motion.div>
         </main>
     );

@@ -3,7 +3,6 @@
     alignment-baseline: top;
     background-color: white;
     border: var(--outline-black) solid 1px; /* Commenting this out gives a clean effect */
-    box-shadow: 0 0 5px #e3e3e3;
     /*outline: white solid 4px;*/
     border-radius: 999px;
     font-size: 0.9rem;
@@ -60,4 +59,15 @@
 .button--contained {
     outline: none;
     height: 2.25rem;
+}
+
+.button--important {
+    border: none;
+    box-shadow: 0 0 20px 5px rgba(145, 91, 224, 0.57);
+    background: linear-gradient(-65deg, #592A9F 0%, #EA75FF 100%);
+    color: white;
+}
+
+.button--important:hover {
+    box-shadow: 0 2px 20px 5px rgba(145, 91, 224, 0.57);
 }
