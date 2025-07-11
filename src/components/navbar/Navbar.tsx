@@ -40,12 +40,13 @@ export function Navbar() {
                 <NavbarButton
                     text="Developer"
                     target="/developer"
-                    iconName={"camera"}
+                    iconName={"terminal"}
+                    // iconName={"code-xml"}
                 />
                 <NavbarButton
                     text="Photographer"
                     target="/photographer"
-                    iconName={"code-xml"}
+                    iconName={"camera"}
                 />
             </motion.nav>
         </>

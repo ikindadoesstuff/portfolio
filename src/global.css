@@ -12,11 +12,11 @@
     --primary-color-500: #251D31;
     --secondary-color-500: #9F77DA;
     --outline-selected: #592A9F;
+    --selected-hover-bg: #8762BF;
     --light-100: #FFFFFF;
     --outline-black: #0E0E0E;
     --page-margin: 0.5rem;
     --shadow-color: rgba(0, 0, 0, 0.25);
-    --selected-hover-bg: #1c5aa6;
     --hover-bg: #d5d5d5;
 
     font-family: 'Raleway Variable', sans-serif;
@@ -58,6 +58,22 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     font-weight: 400;
     font-size: 2rem;
+    letter-spacing: -0.04rem;
+    line-height: 1.1;
+}
+
+b {
+    font-weight: 800;
+}
+
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.center-text {
+    text-align: center;
 }
 
 #root {

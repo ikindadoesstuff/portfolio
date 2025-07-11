@@ -1,8 +1,10 @@
-.navbarButton {
-    height: calc(var(--navbarHeight) - 12px);
+.button {
+    height: 2.7rem;
     alignment-baseline: top;
     background-color: white;
-    border: var(--outline-black) solid 1px;
+    border: var(--outline-black) solid 1px; /* Commenting this out gives a clean effect */
+    box-shadow: 0 0 5px #e3e3e3;
+    /*outline: white solid 4px;*/
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 550;
@@ -30,9 +32,32 @@
     &:hover {
         transform: translateY(-2px);
         transition: 0.2s;
+        outline-color: var(--hover-bg);
         background-color: var(--hover-bg);
         &.selected{
             background-color: var(--selected-hover-bg);
         }
     }
+
+    &:active {
+        transform: translateY(-1.5px) scale(0.95);
+        transition: 0.2s;
+    }
+
+    & .icon {
+        width: 1.25rem;
+    }
+
+    /*&::before {*/
+    /*    background-image: linear-gradient(to top right, #1a1a1a, transparent);*/
+    /*    content: "";*/
+    /*    height: 100%;*/
+    /*    position: absolute;*/
+    /*    width: 100%;*/
+    /*}*/
+}
+
+.button--contained {
+    outline: none;
+    height: 2.25rem;
 }
