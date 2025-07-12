@@ -1,7 +1,8 @@
 import "./Landing.css";
-import { type RefObject, useRef } from "react";
-import { motion } from "motion/react";
+import { type RefObject, useEffect, useRef } from "react";
+import { motion, useInView } from "motion/react";
 import { Button } from "../components/button/Button.tsx";
+import { InfoCard } from "../components/infoCard/InfoCard.tsx";
 
 function Landing() {
     // const onLoadTransitionSettings = {
@@ -9,12 +10,21 @@ function Landing() {
     //     type: "tween",
     //     ease: "circOut",
     // };
-    let landingSectionRef = useRef(null);
-    let aboutSectionRef = useRef(null);
-    // let landingSectionRef = useRef(0);
+
+    const landingSectionRef = useRef(null);
+    const aboutSectionRef = useRef(null);
+    const skillsSectionRef = useRef(null);
+
+    const landingSectionInView = useInView(landingSectionRef, { amount: 0.5 });
+    const aboutSectionInView = useInView(aboutSectionRef, { amount: 0.5 });
+    const skillsSectionInView = useInView(skillsSectionRef, { amount: 0.5 });
+
+    useEffect(() => {
+        console.log("Element is in view, " + skillsSectionInView);
+    }, [skillsSectionInView]);
 
     const scrollToSection = (ref: RefObject<any>) => {
-        ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (ref != null) ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
     };
 
     return (
@@ -58,6 +68,10 @@ function Landing() {
                     />
                 </section>
                 <section ref={aboutSectionRef} className="page-section page-section--flex"></section>
+                <section id="skillsSection" ref={skillsSectionRef} className={"page-section page-section--grid"}>
+                    <h1>Languages</h1>
+                    <InfoCard text={"a"}></InfoCard>
+                </section>
             </motion.div>
         </main>
     );

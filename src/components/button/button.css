@@ -1,8 +1,10 @@
 .button {
+    /*font-family: 'League Spartan Variable', sans-serif;*/
+    /*color: var(--dark-800);*/
     height: 2.7rem;
     alignment-baseline: top;
     background-color: white;
-    border: var(--outline-black) solid 1px; /* Commenting this out gives a clean effect */
+    border: var(--dark-800) solid 1px; /* Commenting this out gives a clean effect */
     /*outline: white solid 4px;*/
     border-radius: 999px;
     font-size: 0.9rem;
@@ -59,6 +61,7 @@
 .button--contained {
     outline: none;
     height: 2.25rem;
+    min-width: 10rem;
 }
 
 .button--important {

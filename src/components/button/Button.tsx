@@ -11,10 +11,10 @@ export function Button({
     text: string;
     iconName: any;
     buttonType?: string;
-    onClick?: any;
+    onClick?: () => void;
 }) {
     return (
-        <button {...props} className={"button " + (buttonType ? buttonType : "")}>
+        <button {...props} className={`button " + ${buttonType ? buttonType : ""}`}>
             <DynamicIcon
                 className={"icon"}
                 name={iconName}
