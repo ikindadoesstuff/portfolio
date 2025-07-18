@@ -1,0 +1,7 @@
+.text-frame {
+    background: var(--ref-palette-light-10--trans50);
+    padding: 1rem calc(0.8rem);
+    border-radius: 1.1rem;
+    border: var(--ref-palette-dark-80) dashed 1px;
+    backdrop-filter: blur(30px);
+}

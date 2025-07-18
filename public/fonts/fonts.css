@@ -1,12 +1,15 @@
+/*RALEWAY*/
+
 @font-face {
     font-family: 'Raleway Variable';
-    src: url('/public/fonts/Raleway-VF.woff2') format('woff2-variations');
+    src: url('/fonts/Raleway/Raleway-VF.woff2') format('woff2-variations');
     font-weight: 200 900;
 }
 
+/*APFEL GROTEZK*/
 @font-face {
     font-family: 'Apfel Grotezk';
-    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Regular.woff2') format('woff2');
+    src: url('/fonts/ApfelGrotezk/ApfelGrotezk-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -14,7 +17,7 @@
 
 @font-face {
     font-family: 'Apfel Grotezk';
-    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Mittel.woff2') format('woff2');
+    src: url('/fonts/ApfelGrotezk/ApfelGrotezk-Mittel.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -22,7 +25,7 @@
 
 @font-face {
     font-family: 'Apfel Grotezk';
-    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Fett.woff2') format('woff2');
+    src: url('/fonts/ApfelGrotezk/ApfelGrotezk-Fett.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -30,8 +33,25 @@
 
 @font-face {
     font-family: 'Apfel Grotezk';
-    src: url('/public/fonts/ApfelGrotezk/ApfelGrotezk-Satt.woff2') format('woff2');
+    src: url('/fonts/ApfelGrotezk/ApfelGrotezk-Satt.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
+}
+
+/*FRAGMENT MONO*/
+@font-face {
+    font-family: "Fragment Mono";
+    src: url("/fonts/Fragment_Mono/FragmentMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fragment Mono";
+    src: url("/fonts/Fragment_Mono/FragmentMono-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
     font-display: swap;
 }
