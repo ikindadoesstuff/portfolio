@@ -40,7 +40,9 @@
     --ref-palette-light-10: rgba(255, 255, 255, 1);
     --ref-palette-light-10--trans20: rgba(255, 255, 255, 0.2);
     --ref-palette-light-10--trans50: rgba(255, 255, 255, 0.5);
-    --ref-palette-light-20: rgba(220, 220, 220, 1);
+    --ref-palette-light-20: rgb(250, 250, 250, 1);
+    --ref-palette-light-30: rgba(220, 220, 220, 1);
+    --ref-palette-light-40: rgba(213, 213, 213, 1);
 
     --ref-palette-dark-60: rgba(64, 64, 64, 1);
     --ref-palette-dark-70: rgba(39, 39, 39, 1);
@@ -97,7 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-weight: 500;
-    font-size: 3.6rem;
+    font-size: var(--ref-text-size-600);
+    @media screen and (max-width: 920px) {
+        font-size: var(--ref-text-size-500);
+    }
     letter-spacing: -0.05rem;
     line-height: 1;
     margin-bottom: 1.6rem;
@@ -105,7 +110,10 @@ h1 {
 
 h2 {
     font-weight: 400;
-    font-size: 2.7rem;
+    font-size: var(--ref-text-size-300);
+    @media screen and (max-width: 920px) {
+        font-size: var(--ref-text-size-200);
+    }
     letter-spacing: -0.04rem;
     line-height: 1;
     margin-bottom: 0.8rem;
@@ -113,7 +121,8 @@ h2 {
 
 p {
     font-family: 'Fragment Mono', sans-serif;
-    font-size: 22px;
+    /*font-size: 22px;*/
+    font-size: clamp(var(--ref-text-size-90), var(--ref-text-size-100), var(--ref-text-size-100));
     text-wrap: pretty;
     line-height: 1.25em;
     letter-spacing: -0.05em;
@@ -124,7 +133,7 @@ p {
 }
 
 b {
-    font-weight: 800;
+    font-weight: 500;
 }
 
 input, button,
@@ -150,7 +159,7 @@ a:has([class]) {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--hover-bg) rgba(0, 0, 0, 0);
+    scrollbar-color: var(--ref-palette-dark-80--trans20) rgba(0, 0, 0, 0);
 }
 
 *::-webkit-scrollbar-track {

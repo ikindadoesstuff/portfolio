@@ -4,7 +4,7 @@
     height: 2.7rem;
     alignment-baseline: top;
     background-color: white;
-    border: var(--dark-800) solid 1px; /* Commenting this out gives a clean effect */
+    border: var(--ref-palette-dark-80) solid 1px; /* Commenting this out gives a clean effect */
     /*outline: white solid 4px;*/
     border-radius: 999px;
     font-size: 0.9rem;
@@ -24,19 +24,17 @@
     transition: 0.2s;
 
     &.selected {
-        background-color: var(--secondary-color-500);
+        background-color: var(--ref-palette-dark-80);
         color: var(--light-100);
-        border: var(--outline-selected) solid 1px;
         box-shadow: -4px 2px 0 var(--shadow-color);
     }
 
     &:hover {
         transform: translateY(-2px);
         transition: 0.2s;
-        outline-color: var(--hover-bg);
-        background-color: var(--hover-bg);
+        background-color: var(--ref-palette-light-40);
         &.selected{
-            background-color: var(--selected-hover-bg);
+            background-color: var(--ref-palette-dark-80);
         }
     }
 

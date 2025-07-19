@@ -4,7 +4,9 @@ import { motion, useInView } from "motion/react";
 import { Button } from "../components/button/Button.tsx";
 import { InfoFrame } from "../components/infoCard/InfoFrame.tsx";
 import { TextFrame } from "../components/textFrame/TextFrame.tsx";
-import SvgHeroCropped from "../assets/svg/hero-cropped.tsx";
+import SvgHeroCropped from "../assets/svg/hero-banner.tsx";
+import SvgStreak1 from "../assets/svg/streak_1.tsx";
+import SvgStreak2 from "../assets/svg/streak_2.tsx";
 
 function Landing() {
     // const onLoadTransitionSettings = {
@@ -93,6 +95,7 @@ function Landing() {
                 <section id="landing" ref={landingSectionRef} className="page-section page-section--flex">
                     {/*<img id="hero" src={"/hero-cropped.svg"} alt="hero" />*/}
                     <SvgHeroCropped id="hero"></SvgHeroCropped>
+                    <SvgStreak2 class="graphic__streak"></SvgStreak2>
                     <TextFrame>
                         <p id="subheading" className="center-text">
                             I'm a <b>Student</b> and{" "}
@@ -112,34 +115,36 @@ function Landing() {
                 </section>
                 <section
                     style={{
-                        flex: "1 1 0",
+                        display: "grid",
+                        gridTemplateColumns: "2fr 23rem",
+                        gridTemplateRows: "14rem 2fr",
+                        gap: "2rem",
                     }}
                     ref={aboutSectionRef}
                     className="page-section page-section--flex"
                 >
-                    {/*<InfoCard text={"Hey, I'm Devyon."}></InfoCard>*/}
-                    <div>
-                        {/*<h2>Hi, I'm Devyon</h2>*/}
-                        <InfoFrame>
-                            <h1>About Me!</h1>
-                            <h2>Hi, I'm Devyon.</h2>
-                            <p>
-                                I’m a Belizean Born, Atlanta-based software engineer. My programming journey started as
-                                a desire to develop video games, but has since blossomed into a vast new world of
-                                possibilities where I’ve realized just how much of an impact I can have on the world by
-                                crafting accessible software.
-                                <br />
-                                <br />
-                                I’ve a penchant for creative problem solving, and have practical experience in
-                                developing scalable, secure systems, accompanied by intuitive, interfaces, that
-                                accomplish much more than the bare minimum.
-                                <br />
-                                <br />I try to pickup new tools and frameworks frequently so I can stay ahead of the
-                                curve. My adaptability and persistent work ethic make me a great fit for any development
-                                team.
-                            </p>
-                        </InfoFrame>
-                    </div>
+                    <TextFrame style={{ gridColumn: "1 / 2", gridRow: "1 / 4" }}>
+                        <h1>About Me!</h1>
+                        <h2>
+                            Hi, I'm <b>Devyon.</b>
+                        </h2>
+                        <p style={{ verticalAlign: "bottom" }}>
+                            I’m a Belizean Born, Atlanta-based software engineer. My programming journey started as a
+                            desire to develop video games, but has since blossomed into a vast new world of
+                            possibilities where I’ve realized just how much of an impact I can have on the world by
+                            crafting accessible software.
+                            <br />
+                            <br />
+                            I’ve a penchant for creative problem solving, and have practical experience in developing
+                            scalable, secure systems, accompanied by intuitive, interfaces, that accomplish much more
+                            than the bare minimum.
+                            <br />
+                            <br />I try to pickup new tools and frameworks frequently so I can stay ahead of the curve.
+                            My adaptability and persistent work ethic make me a great fit for any development team._
+                        </p>
+                    </TextFrame>
+                    <TextFrame style={{ gridColumn: "2 / 3", gridRow: "1 / 2" }}></TextFrame>
+                    <TextFrame style={{ gridColumn: "2 / 3", gridRow: "2 / 4" }}></TextFrame>
                 </section>
                 <section id="skillsSection" ref={skillsSectionRef} className={"page-section page-section--grid"}>
                     <h1>Languages</h1>

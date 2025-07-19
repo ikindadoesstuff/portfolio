@@ -5,39 +5,38 @@
     background: var(--ref-palette-dark-80);
 
     .page-container__content {
-        background: #251d31;
-        /*BASIC*/
-        /*background: linear-gradient(-45deg, rgba(24, 24, 39, 1) 0%, rgba(37, 29, 49, 1) 60%, rgba(25, 23, 37, 1) 100%),*/
-        /*linear-gradient(45deg, rgba(206, 29, 79, 0.35) 0%, rgba(125, 49, 236, 0.1) 100%);*/
-
-        /*COLORFUL*/
-        /*background:*/
-        /*        linear-gradient(-45deg, rgb(24, 24, 39, 0.5) 0%, rgba(37, 29, 49, 0.5) 60%, rgba(25, 23, 37, 0.5) 100%),*/
-        /*        linear-gradient(45deg, rgba(206, 29, 79, 0.35) 0%, rgba(125, 49, 236, 0.1) 100%),*/
-        /*        radial-gradient(rgba(76, 20, 189, 1) 0%, rgb(15, 9, 96) 100%);*/
-
-        background: url("/textures/dot.svg") 0 0/40px 40px,
-        linear-gradient(0deg, var(--ref-palette-light-10--trans20), var(--ref-palette-light-10--trans20)),
-        radial-gradient(ellipse, var(--ref-palette-light-10) 0%, var(--ref-palette-light-20) 90.87%, var(--ref-palette-light-20) 100%);
+        background:
+            url("/textures/dot.svg") 0 0/1.65rem local,
+            linear-gradient(0deg, var(--ref-palette-light-10--trans20), var(--ref-palette-light-10--trans20)),
+            radial-gradient(
+                ellipse,
+                var(--ref-palette-light-10) 0%,
+                var(--ref-palette-light-30) 90.87%,
+                var(--ref-palette-light-30) 100%
+            );
+        /*background-attachment: local;*/
 
         height: 100%;
         width: 100%;
         border-radius: 5vw;
         outline: 1px solid var(--dark-800);
-        z-index: 0;
+        /*z-index: 0;*/
         overflow-y: auto;
-        /*box-shadow:*/
+        overflow-x: hidden;
         /*        inset 0 0 2px rgba(0, 0, 0, 0.5),*/
         /*        inset 0 0 30px 0 rgba(0, 0, 0, 0.25);*/
         /*scroll-snap-type: y mandatory;*/
 
         .page-section {
+            margin-left: auto;
+            margin-right: auto;
             scroll-snap-align: center;
             /*margin-top: 6vh;*/
-            padding: 16vh 10vw 10vh 10vw;
+            padding: 6.4rem 5vw;
             /*translate: 0% 10%;*/
             height: 100%;
             box-sizing: border-box;
+            max-width: 96rem;
             /*scroll-snap-stop: always;*/
             &.page-section--grid {
                 display: grid;
@@ -59,6 +58,22 @@
     & < * {
         flex: 1 1 auto;
     }
+}
+
+.graphic__streak {
+    z-index: -1;
+    position: absolute;
+    opacity: 80%;
+    width: 120vw;
+    top: 70%;
+    /*transform: scale(15%);*/
+    shape-rendering: geometricPrecision;
+    /*image-rendering: pixelated;*/
+    transform: rotate(-15deg);
+    translate: -50% -50%;
+    left: 50%;
+    transform-origin: center;
+    backface-visibility: hidden;
 }
 
 #subheading {
