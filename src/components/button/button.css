@@ -1,74 +1,50 @@
 .button {
-    /*font-family: 'League Spartan Variable', sans-serif;*/
-    /*color: var(--dark-800);*/
-    height: 2.7rem;
-    alignment-baseline: top;
-    background-color: white;
-    border: var(--ref-palette-dark-80) solid 1px; /* Commenting this out gives a clean effect */
-    /*outline: white solid 4px;*/
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 550;
-
-    /* Flexbox */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    font-size: var(--ref-text-size-100);
+    font-weight: 600;
     gap: 5px;
 
-    /*text-bo: both;*/
-    text-align: center;
-    padding: 0 15px;
-    box-sizing: border-box;
-
-    transition: 0.2s;
-
     &.selected {
-        background-color: var(--ref-palette-dark-80);
-        color: var(--light-100);
-        box-shadow: -4px 2px 0 var(--shadow-color);
     }
 
     &:hover {
-        transform: translateY(-2px);
-        transition: 0.2s;
-        background-color: var(--ref-palette-light-40);
-        &.selected{
-            background-color: var(--ref-palette-dark-80);
-        }
+        cursor: pointer;
     }
 
     &:active {
-        transform: translateY(-1.5px) scale(0.95);
-        transition: 0.2s;
     }
 
     & .icon {
-        width: 1.25rem;
+        position: relative;
+        width: var(--ref-text-size-200);
+        top: -1px;
     }
-
-    /*&::before {*/
-    /*    background-image: linear-gradient(to top right, #1a1a1a, transparent);*/
-    /*    content: "";*/
-    /*    height: 100%;*/
-    /*    position: absolute;*/
-    /*    width: 100%;*/
-    /*}*/
 }
 
-.button--contained {
-    outline: none;
+.button--nav {
     height: 2.25rem;
-    min-width: 10rem;
+    width: 8.938rem;
+    padding: 10px 15px;
+    border-radius: 0.625rem;
+    border: var(--sys-border-color--outer) 1px solid;
+    background: var(--sys-button-color--nav);
+}
+
+.button--normal {
+    height: 3.1rem;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 999px;
+    border: var(--sys-border-color--alternate) 1px solid;
+    background: var(--sys-button-color--normal);
+
+    &:hover {
+        background: var(--sys-button-color--normal--hover);
+    }
 }
 
 .button--important {
-    border: none;
-    box-shadow: 0 0 20px 5px rgba(145, 91, 224, 0.57);
-    background: linear-gradient(-65deg, #592A9F 0%, #EA75FF 100%);
-    color: white;
-}
-
-.button--important:hover {
-    box-shadow: 0 2px 20px 5px rgba(145, 91, 224, 0.57);
 }

@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, createBrowserRouter, Route, Routes } from "react-router";
 
 // Import Pages
-import Landing from "./pages/Landing.tsx";
+import Home from "./pages/Home.tsx";
 
 // Import Stylesheet
 import "./global.css";
@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route path="/developer" element={<Landing />}></Route>
+                <Route path="/developer" element={<Home />}></Route>
             </Routes>
         </BrowserRouter>
     </StrictMode>,

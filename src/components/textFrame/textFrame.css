@@ -1,20 +1,8 @@
 .text-frame {
-    background: var(--ref-palette-light-10--trans50);
-    /*padding: 1.1rem 1rem;*/
-    padding: 10%;
-    /*padding-top: 10%;*/
-    /*border-radius: 1.1rem;*/
-    border-radius: 0.9rem;
-    border: var(--ref-palette-dark-80) dashed 1px;
-    backdrop-filter: blur(15px);
-    /*width: 100%;*/
-    /*height: 100%;*/
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    overflow: auto;
 
-    /*& > * {*/
-    /*    flex: 1 1 auto*/
-    /*}*/
+    & > * {
+        /*flex: 1;*/
+    }
 }

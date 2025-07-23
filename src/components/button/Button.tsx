@@ -1,26 +1,38 @@
 import "./button.css";
 
 import { DynamicIcon } from "lucide-react/dynamic";
+import { Link } from "react-router";
 
 export function Button({
     text,
     iconName,
-    buttonType,
+    buttonVariant = "button--normal",
+    target,
+    onClick,
     ...props
 }: {
     text: string;
     iconName: any;
-    buttonType?: string;
+    buttonVariant?: "button--normal" | "button--nav";
+    target?: string;
     onClick?: () => void;
 }) {
-    return (
-        <button {...props} className={`button " + ${buttonType ? buttonType : ""}`}>
-            <DynamicIcon
-                className={"icon"}
-                name={iconName}
-                // strokeWidth={2}
-            />
-            {text}
-        </button>
-    );
+    const combinedClassNames = `button ${buttonVariant ? buttonVariant : ""}`.trim();
+    const iconStrokeWidth = 1.5;
+
+    if (buttonVariant == "button--normal") {
+        return (
+            <button onClick={onClick} {...props} className={combinedClassNames}>
+                <DynamicIcon className={"icon"} name={iconName} strokeWidth={iconStrokeWidth} />
+                {text}
+            </button>
+        );
+    } else if (buttonVariant == "button--nav") {
+        return (
+            <Link to={target} onClick={onClick} {...props} className={combinedClassNames}>
+                <DynamicIcon className={"icon"} name={iconName} strokeWidth={iconStrokeWidth} />
+                {text}
+            </Link>
+        );
+    }
 }
