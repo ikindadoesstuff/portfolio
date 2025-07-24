@@ -13,7 +13,7 @@ export function Button({
 }: {
     text: string;
     iconName: any;
-    buttonVariant?: "button--normal" | "button--nav";
+    buttonVariant?: "button--normal" | "button--normal--link" | "button--nav";
     target?: string;
     onClick?: () => void;
 }) {
@@ -26,6 +26,13 @@ export function Button({
                 <DynamicIcon className={"icon"} name={iconName} strokeWidth={iconStrokeWidth} />
                 {text}
             </button>
+        );
+    } else if (buttonVariant == "button--normal--link") {
+        return (
+            <Link to={target} onClick={onClick} {...props} className={combinedClassNames}>
+                <DynamicIcon className={"icon"} name={iconName} strokeWidth={iconStrokeWidth} />
+                {text}
+            </Link>
         );
     } else if (buttonVariant == "button--nav") {
         return (

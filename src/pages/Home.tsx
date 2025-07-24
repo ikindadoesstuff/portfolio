@@ -2,13 +2,84 @@ import "./Home.css";
 import { type RefObject, useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { Button } from "../components/button/Button.tsx";
-import { InfoFrame } from "../components/infoCard/InfoFrame.tsx";
 import { TextFrame } from "../components/textFrame/TextFrame.tsx";
 import SvgHeroCropped from "../assets/svg/SvgHeroCropped.tsx";
-import SvgStreak1 from "../assets/svg/SvgStreak1.tsx";
-import SvgStreak2 from "../assets/svg/SvgStreak2.tsx";
 import { PageSection } from "../components/pageSection/PageSection.tsx";
 import { MonoTile } from "../components/monoTile/MonoTile.tsx";
+import { StackCard } from "../components/stackCard/StackCard.tsx";
+import { LinkTile } from "../components/linkTile/LinkTile.tsx";
+import { PageFooter } from "../components/pageFooter/PageFooter.tsx";
+
+const LanguagesStackIcons = [
+    {
+        src: "css",
+        description: "",
+    },
+    {
+        src: "typescript",
+        description: "",
+    },
+    {
+        src: "javascript",
+        description: "",
+    },
+    {
+        src: "html",
+        description: "",
+    },
+    {
+        src: "c++",
+        description: "",
+    },
+    {
+        src: "java",
+        description: "",
+    },
+];
+const FrameworksStackIcons = [
+    {
+        src: "react",
+        description: "",
+    },
+    {
+        src: "express",
+        description: "",
+    },
+    {
+        src: "motion",
+        description: "",
+    },
+    {
+        src: "qt",
+        description: "",
+    },
+];
+const ToolsStackIcons = [
+    {
+        src: "vmware",
+        description: "",
+    },
+    {
+        src: "git",
+        description: "",
+    },
+    {
+        src: "mysql",
+        description: "",
+    },
+    {
+        src: "figma",
+        description: "",
+    },
+    {
+        src: "illustrator",
+        description: "",
+    },
+    {
+        src: "photoshop",
+        description: "",
+    },
+];
 
 function Home() {
     // const onLoadTransitionSettings = {
@@ -22,6 +93,7 @@ function Home() {
     const landingSectionRef = useRef(null);
     const aboutSectionRef = useRef(null);
     const skillsSectionRef = useRef(null);
+    const contactSectionRef = useRef(null);
 
     // Handle Page Section FX
     const isLandingSectionInView = useInView(landingSectionRef, { amount: 0.5 });
@@ -221,11 +293,64 @@ function Home() {
                         <p>about software development.</p>
                     </TextFrame>
                 </PageSection>
-                <PageSection></PageSection>
-                <PageSection></PageSection>
-                {/*<section id="landingSection" ref={landingSectionRef} className="page-section"></section>*/}
-                {/*<section ref={aboutSectionRef} className="page-section page-section--flex"></section>*/}
-                {/*<section id="skillsSection" ref={skillsSectionRef} className={"page-section"}></section>*/}
+                <PageSection
+                    ref={skillsSectionRef}
+                    id={"skills-section"}
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        // gridTemplateColumns: "1fr",
+                        // gridTemplateRows: "auto 1fr 1fr 1fr 1fr",
+                        // gridTemplateAreas: `"header" "row1" "row2" "row3" "footer"`,
+                        gap: "0 4rem",
+                    }}
+                >
+                    <h1>My Stack</h1>
+                    <StackCard stackIconsData={LanguagesStackIcons}>Languages</StackCard>
+                    <StackCard stackIconsData={FrameworksStackIcons}>Frameworks</StackCard>
+                    <StackCard stackIconsData={ToolsStackIcons}>
+                        Additional
+                        <br />
+                        Tools
+                    </StackCard>
+                    <Button
+                        buttonVariant={"button--normal--link"}
+                        text={"Projects"}
+                        iconName={"gallery-vertical-end"}
+                        target={"/projects"}
+                        // onClick={() => {
+                        //     scrollToSection(aboutSectionRef);
+                        // }}
+                    />
+                </PageSection>
+                <PageSection
+                    ref={contactSectionRef}
+                    id={"contact-section"}
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr",
+                        gridTemplateRows: "auto auto 1fr",
+                        gridTemplateAreas: `"header" "body" "socials"`,
+                        gap: "0 4rem",
+                    }}
+                >
+                    <h1>Reach Out!</h1>
+                    <TextFrame>
+                        <h3>I'm Available for Work, Feedback, or a Quick Chat.</h3>
+                        <p>
+                            Shoot me an email, or message me on LinkedIn, and I'll be sure to get back to you as soon as
+                            I can.
+                        </p>
+                    </TextFrame>
+                    <div style={{ display: "flex", margin: "6rem 2rem 2rem 2rem", height: "fit-content" }}>
+                        <LinkTile text={"GitHub"} iconSrc={"github"} href={""} />
+                        <LinkTile text={"Linkedin"} iconSrc={"linkedin"} href={""} />
+                        <LinkTile text={"Email"} iconSrc={"email"} href={""} />
+                    </div>
+                </PageSection>
+                <PageFooter />
             </motion.div>
         </main>
     );
