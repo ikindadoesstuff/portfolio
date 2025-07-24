@@ -10,6 +10,7 @@ import "./global.css";
 
 // Import Components
 import { Navbar } from "./components/navbar/Navbar.tsx";
+import { PageFooter } from "./components/pageFooter/PageFooter.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route path="/developer" element={<Home />}></Route>
             </Routes>
+            <PageFooter />
         </BrowserRouter>
     </StrictMode>,
 );

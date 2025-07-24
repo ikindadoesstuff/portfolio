@@ -8,7 +8,6 @@ import { PageSection } from "../components/pageSection/PageSection.tsx";
 import { MonoTile } from "../components/monoTile/MonoTile.tsx";
 import { StackCard } from "../components/stackCard/StackCard.tsx";
 import { LinkTile } from "../components/linkTile/LinkTile.tsx";
-import { PageFooter } from "../components/pageFooter/PageFooter.tsx";
 
 const LanguagesStackIcons = [
     {
@@ -350,7 +349,6 @@ function Home() {
                         <LinkTile text={"Email"} iconSrc={"email"} href={""} />
                     </div>
                 </PageSection>
-                <PageFooter />
             </motion.div>
         </main>
     );
