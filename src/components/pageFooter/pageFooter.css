@@ -1,84 +1,84 @@
 .page-footer {
-    height: 310px;
-    background: var(--sys-background-color--footer);
-    border-top: var(--sys-border-color--outer) 1px solid;
-    /*padding: var(--sys-page-section-padding);*/
-    & > .page-footer__content {
-        display: grid;
-        grid-template-rows: 7fr auto 3fr;
-        grid-template-columns: 6fr 3fr;
-        grid-template-areas: "description links" "separator separator" "copyright copyright";
-        max-width: 1200px;
-        height: 100%;
-        margin: 0 auto 0 auto;
-        padding: 35px 10px;
+  height: 310px;
+  background: var(--sys-background-color--footer);
+  border-top: var(--sys-border-color--outer) 1px solid;
+  /*padding: var(--sys-page-section-padding);*/
+  & > .page-footer__content {
+    display: grid;
+    grid-template-rows: 7fr auto 3fr;
+    grid-template-columns: 6fr 3fr;
+    grid-template-areas: "description links" "separator separator" "copyright copyright";
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    padding: 35px 10px;
 
-        & > div {
-            padding: 0 1.25rem;
-        }
-
-        .separator {
-            grid-area: separator;
-            border: 0;
-            height: 1px;
-            background: var(--sys-border-color--outer);
-        }
-
-        & > .page-footer__description {
-            grid-area: description;
-        }
-
-        & > .page-footer__links {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-
-            grid-area: links;
-
-            & > .page-footer__links__column {
-                display: flex;
-                flex-direction: column;
-
-                & > .page-footer__links__text {
-                    z-index: 1;
-                    display: block;
-                    position: relative;
-                    width: fit-content;
-                    line-height: 1.6;
-                    color: var(--sys-text-color--body);
-                    text-decoration: none;
-                }
-
-                /*Link underline*/
-                & > a {
-                    &::after {
-                        z-index: -1;
-                        content: "";
-                        position: absolute;
-                        background: var(--ref-palette-blue-500);
-                        /*outline: #00000000 2px solid;*/
-                        border-radius: 2px;
-                        height: 0.2em;
-                        /*width: 100%;*/
-                        bottom: 0;
-                        left: -0.1em;
-                        right: -0.1em;
-
-                        transition: all 0.2s;
-                    }
-
-                    &:hover {
-                        &::after {
-                            height: 100%;
-                            /*outline: var(--ref-palette-blue-500) 2px solid;*/
-                            /*background: var(--ref-palette-neutral-600);*/
-                        }
-                    }
-                }
-            }
-        }
-
-        & > .page-footer__copyright {
-            grid-area: copyright;
-        }
+    & > div {
+      padding: 0 1.25rem;
     }
+
+    .separator {
+      grid-area: separator;
+      border: 0;
+      height: 1px;
+      background: var(--sys-border-color--outer);
+    }
+
+    & > .page-footer__description {
+      grid-area: description;
+    }
+
+    & > .page-footer__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-area: links;
+
+      & > .page-footer__links__column {
+        display: flex;
+        flex-direction: column;
+
+        & > .page-footer__links__text {
+          z-index: 1;
+          display: block;
+          position: relative;
+          width: fit-content;
+          line-height: 1.6;
+          color: var(--sys-text-color--body);
+          text-decoration: none;
+        }
+
+        /*Link underline*/
+        & > a {
+          &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            background: var(--ref-palette-blue-500);
+            /*outline: #00000000 2px solid;*/
+            border-radius: 2px;
+            height: 0.2em;
+            /*width: 100%;*/
+            bottom: 0;
+            left: -0.1em;
+            right: -0.1em;
+
+            transition: all 0.2s;
+          }
+
+          &:hover {
+            &::after {
+              height: 100%;
+              /*outline: var(--ref-palette-blue-500) 2px solid;*/
+              /*background: var(--ref-palette-neutral-600);*/
+            }
+          }
+        }
+      }
+    }
+
+    & > .page-footer__copyright {
+      grid-area: copyright;
+    }
+  }
 }

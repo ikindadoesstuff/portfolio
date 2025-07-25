@@ -13,13 +13,13 @@ import { Navbar } from "./components/navbar/Navbar.tsx";
 import { PageFooter } from "./components/pageFooter/PageFooter.tsx";
 
 createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <BrowserRouter>
-            <Navbar />
-            <Routes>
-                <Route path="/developer" element={<Home />}></Route>
-            </Routes>
-            <PageFooter />
-        </BrowserRouter>
-    </StrictMode>,
+  <StrictMode>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />}></Route>
+      </Routes>
+      <PageFooter />
+    </BrowserRouter>
+  </StrictMode>,
 );
