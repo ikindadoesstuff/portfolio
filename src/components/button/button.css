@@ -6,6 +6,7 @@
   font-size: var(--ref-text-size-100);
   font-weight: 600;
   gap: 5px;
+  transition: all 0.2s;
 
   &.selected {
   }
@@ -44,6 +45,7 @@
 
   &:hover {
     background: var(--sys-button-color--normal--hover);
+    transition: all 0.2s;
   }
 }
 

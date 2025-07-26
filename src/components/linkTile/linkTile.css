@@ -4,7 +4,7 @@
   align-items: center;
   width: 6rem;
   height: fit-content;
-  margin: 0 2rem 0 2rem;
+  /*margin: 0 2rem 0 2rem;*/
 
   & > .link-tile__card {
     border: var(--sys-border-color--outer) 1px solid;

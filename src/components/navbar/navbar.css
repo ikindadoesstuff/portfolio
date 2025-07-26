@@ -1,7 +1,7 @@
 #navbar {
   z-index: 2;
   position: fixed;
-  width: 100vw;
+  width: 100dvw;
   height: var(--sys-navbar-height);
 
   display: flex;

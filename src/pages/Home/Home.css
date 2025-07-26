@@ -1,0 +1,76 @@
+#landing-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about-section {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: auto 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "description timeline"
+    "footer footer";
+  gap: 0 4rem;
+}
+
+#skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 4rem;
+}
+
+#contact-section {
+  min-height: 0;
+  height: 75dvh;
+  #social-tiles {
+    display: flex;
+    margin: 6rem 2rem 2rem 2rem;
+    height: fit-content;
+    gap: 4rem;
+
+    & > * {
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #landing-section {
+  }
+
+  #about-section {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "description" "timeline" "footer";
+    gap: 1.5rem;
+  }
+
+  #social-tiles {
+  }
+}
+
+.mono-tile__container {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  gap: 1ch;
+  font-size: var(--ref-text-size-200);
+  flex-wrap: wrap;
+}
+
+#about-me-footer {
+  /*width: fit-content;*/
+}
+
+@media screen and (max-width: 500px) {
+  #skills-section {
+    gap: 4rem;
+  }
+}

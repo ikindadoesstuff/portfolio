@@ -25,7 +25,12 @@ export function StackCard({
       </div>
       <div className="stack-icon-container" style={{ gridArea: "icons" }}>
         {stackIconsData.map((stackIconData) => (
-          <img className="stack-icon" src={`/stack_icons/${stackIconData.src}.svg`} alt={stackIconData.description} />
+          <img
+            key={stackIconData.src}
+            className="stack-icon"
+            src={`/stack_icons/${stackIconData.src}.svg`}
+            alt={stackIconData.description}
+          />
         ))}
       </div>
     </div>
